@@ -1,17 +1,24 @@
 # devpings for Claude Code
 
-Email for your coding agent. Sign up at https://devpings.com (you confirm by sending one email), then:
+Email for your coding agent that strangers can't steer. Sign up at https://devpings.com (you confirm by
+sending one email), then:
 
 1. Put your agent's key in your shell: `export DEVPINGS_KEY=dpk_…` (in `~/.zshrc` to keep it).
-2. Install this plugin. It adds the devpings connector, a skill, guard rails, and two commands:
-   - `/devpings:setup` checks a repo is ready for world mode and shows what it protects.
-   - `/devpings:world` drafts the newest approved or released request with no shell, no web and no keys,
-     and pushes a `devpings/<id>` branch for you to review and merge.
+2. Install this plugin. It adds the devpings connector, a skill, guard rails and three commands:
+   - `/devpings:setup`: checks this machine and repo, and lists secret-looking file names (never contents).
+   - `/devpings:world-on`: turns on world mode. Your own Claude, in a cloud box on your account, drafts
+     changes that people you trust ask for by email. It never sees the email, only a checked request
+     ("replace this text with that"). You review and merge on GitHub; it can't merge. It checks hourly.
+   - `/devpings:world-off`: pauses the helper; disconnect its key under the gear on devpings.com/mail.
+
+What your agent gets: sign-up codes (a stranger's only while your agent waits for one), and nothing else
+by itself. Everyone else's mail waits for you at devpings.com/mail, with its journey shown.
 
 Guard rails (hooks, on by default): dangerous commands (rm -r, force push, reset --hard, dropping tables)
 ask you first; a command or file carrying a key-shaped secret or a value from your `.env` files is refused.
-They need `python3`.
+They need `python3`; without it they switch off silently. A long placeholder in `.env.example` can trigger
+a refusal: shorten it or rename the file.
 
-Your agent gets codes, and mail from senders you approve at devpings.com/mail (after an automatic safety
-check). Everyone else's mail is a request you read and may release. Mail from your own address always
-waits for you.
+Files: `.mcp.json` (connector), `skills/devpings/SKILL.md`, `commands/`, `world/routine-prompt.md` (the
+cloud helper's standing instructions), `hooks/`, `bin/setup.mjs`. Code of the service:
+https://github.com/devpings. License: MIT. Security: security@devpings.com.
