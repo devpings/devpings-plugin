@@ -3,7 +3,9 @@
     "devpings": {
       "type": "http",
       "url": "https://www.devpings.com/mcp",
-      "headers": { "Authorization": "Bearer ${DEVPINGS_KEY}" }
+      "headers": {
+        "Authorization": "Bearer ${user_config.devpings_key}"
+      }
     }
   }
 }

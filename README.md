@@ -3,8 +3,10 @@
 Email for your coding agent that strangers can't steer. Sign up at https://devpings.com (you confirm by
 sending one email), then:
 
-1. Put your agent's key in your shell: `export DEVPINGS_KEY=dpk_…` (in `~/.zshrc` to keep it).
-2. Install this plugin. It adds the devpings connector, a skill, guard rails and three commands:
+1. Install this plugin:
+   `claude plugin marketplace add devpings/devpings-plugin` then `claude plugin install devpings@devpings`.
+   It asks for your agent's key once (from devpings.com) and stores it as a secret.
+2. It adds the devpings connector, a skill, guard rails and three commands:
    - `/devpings:setup`: checks this machine and repo, and lists secret-looking file names (never contents).
    - `/devpings:world-on`: turns on world mode. Your own Claude, in a cloud box on your account, drafts
      changes that people you trust ask for by email. It never sees the email, only a checked request
