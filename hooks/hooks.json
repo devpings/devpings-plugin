@@ -1,0 +1,9 @@
+{
+  "description": "devpings guard rails: dangerous commands ask you first; secrets never go into commands or files.",
+  "hooks": {
+    "PreToolUse": [
+      { "matcher": "Bash", "hooks": [{ "type": "command", "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/hooks/guard-bash.py\"" }] },
+      { "matcher": "Write|Edit|MultiEdit", "hooks": [{ "type": "command", "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/hooks/guard-secrets.py\"" }] }
+    ]
+  }
+}

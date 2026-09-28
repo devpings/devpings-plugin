@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "devpings": {
+      "type": "http",
+      "url": "https://www.devpings.com/mcp",
+      "headers": { "Authorization": "Bearer ${DEVPINGS_KEY}" }
+    }
+  }
+}

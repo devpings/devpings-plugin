@@ -1,0 +1,11 @@
+{
+  "name": "devpings",
+  "version": "0.2.0",
+  "description": "Email for your coding agent: its own address, codes it can read, mail from senders you approve, and world mode for requests from outside.",
+  "author": {
+    "name": "devpings",
+    "url": "https://devpings.com"
+  },
+  "homepage": "https://devpings.com",
+  "license": "MIT"
+}
