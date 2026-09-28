@@ -5,7 +5,7 @@ sending one email), then:
 
 1. Install this plugin:
    `claude plugin marketplace add devpings/devpings-plugin` then `claude plugin install devpings@devpings`.
-   It asks for your agent's key once (from devpings.com) and stores it as a secret.
+   Then type `/mcp`, choose devpings, Authenticate: you sign in on devpings.com and click Allow. No key to copy.
 2. It adds the devpings connector, a skill and two commands:
    - `/devpings:world-on`: turns on world mode. Your own Claude, in a cloud box on your account, drafts
      changes that people you trust ask for by email. It never sees the email, only a checked request

@@ -1,6 +1,6 @@
 {
   "name": "devpings",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "Email for your coding agent: its own address, codes it can read, mail from senders you approve, and world mode for requests from outside.",
   "author": {
     "name": "devpings",
@@ -17,14 +17,6 @@
     "world mode",
     "safety"
   ],
-  "userConfig": {
-    "devpings_key": {
-      "type": "string",
-      "title": "devpings key",
-      "description": "Your agent's key from devpings.com (starts dpk_). Shown once when you get your agent's address; stored as a secret.",
-      "sensitive": true
-    }
-  },
   "privacyPolicyUrl": "https://www.devpings.com/privacy",
   "icon": ".claude-plugin/icon.svg"
 }
